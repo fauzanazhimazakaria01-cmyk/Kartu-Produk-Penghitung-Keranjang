@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TokoKlasik - Implementasi Komponen Dasar</title>
+  <!-- Menghubungkan berkas CSS eksternal -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- KOMPONEN 1: Header & Navigasi -->
+  <header class="site-header">
+    <div class="container header-content">
+      <a href="#" class="logo">TokoKlasik</a>
+      
+      <!-- Tombol toggle menu untuk tampilan mobile -->
+      <button id="menu-toggle" class="btn-icon" aria-label="Buka Menu">
+        ☰ Menu
+      </button>
+
+      <nav id="main-nav" class="main-nav">
+        <ul>
+          <li><a href="#produk">Produk</a></li>
+          <li><a href="#akun">Masuk</a></li>
+          <li><a href="#kontak">Kontak</a></li>
+        </ul>
+      </nav>
+
+      <!-- Penghitung Keranjang -->
+      <div class="cart-badge">
+        Keranjang: <span id="cart-count">0</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- KOMPONEN 2: Hero Banner -->
+  <section class="hero">
+    <div class="container">
+      <h1>Koleksi Minimalis Terbaru</h1>
+      <p>Temukan barang kebutuhan harian dengan desain modern dan fungsional.</p>
+      <a href="#produk" class="btn btn-primary">Lihat Katalog</a>
+    </div>
+  </section>
+
+  <!-- KOMPONEN 3: Daftar Kartu Produk -->
+  <main id="produk" class="container section">
+    <h2>Produk Unggulan</h2>
+    <div class="product-grid">
+      
+      <!-- Kartu Produk 1 -->
+      <article class="product-card">
+        <div class="product-image">Foto Produk 1</div>
+        <div class="product-info">
+          <h3>Tas Ransel Kanvas</h3>
+          <p class="price">Rp 250.000</p>
+          <p class="desc">Tahan air dan muat laptop hingga 15 inci.</p>
+          <button class="btn btn-secondary add-to-cart" data-name="Tas Ransel Kanvas">
+            + Tambah ke Keranjang
+          </button>
+        </div>
+      </article>
+
+      <!-- Kartu Produk 2 -->
+      <article class="product-card">
+        <div class="product-image">Foto Produk 2</div>
+        <div class="product-info">
+          <h3>Botol Minum Termal</h3>
+          <p class="price">Rp 120.000</p>
+          <p class="desc">Menjaga suhu minuman dingin atau panas hingga 12 jam.</p>
+          <button class="btn btn-secondary add-to-cart" data-name="Botol Minum Termal">
+            + Tambah ke Keranjang
+          </button>
+        </div>
+      </article>
+
+      <!-- Kartu Produk 3 -->
+      <article class="product-card">
+        <div class="product-image">Foto Produk 3</div>
+        <div class="product-info">
+          <h3>Jam Tangan Analog</h3>
+          <p class="price">Rp 450.000</p>
+          <p class="desc">Tali kulit sintetis premium dengan desain tipis.</p>
+          <button class="btn btn-secondary add-to-cart" data-name="Jam Tangan Analog">
+            + Tambah ke Keranjang
+          </button>
+        </div>
+      </article>
+
+    </div>
+  </main>
+
+  <!-- KOMPONEN 4: Form Login dengan Validasi -->
+  <section id="akun" class="container section">
+    <div class="form-wrapper">
+      <h2>Masuk ke Akun Anda</h2>
+      <form id="login-form" novalidate>
+        <div class="form-group">
+          <label for="email">Alamat Email</label>
+          <input type="email" id="email" name="email" placeholder="nama@email.com" required>
+        </div>
+
+        <div class="form-group">
+          <label for="password">Kata Sandi</label>
+          <input type="password" id="password" name="password" placeholder="Minimal 6 karakter" required>
+        </div>
+
+        <!-- Area pesan umpan balik validasi -->
+        <p id="form-message" class="form-message" aria-live="polite"></p>
+
+        <button type="submit" class="btn btn-primary full-width">Masuk</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- KOMPONEN 5: Footer -->
+  <footer id="kontak" class="site-footer">
+    <div class="container">
+      <p>&copy; 2026 TokoKlasik. Dibuat untuk Tugas Implementasi Antarmuka Web.</p>
+    </div>
+  </footer>
+
+  <!-- Menghubungkan berkas JavaScript eksternal -->
+  <script src="script.js"></script>
+</body>
+</html>
